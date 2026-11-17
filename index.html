@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Dashboard - Hatika Utari Silaen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- ============ HEADER ============ -->
+    <header class="header">
+      <h1>Royal Dashboard</h1>
+      <input type="text" id="cari" class="cari" placeholder="Cari Kelas, Dokumen, Aktifitas dll...">
+    </header>
+
+    <div class="layout">
+
+      <!-- ============ NAV ============ -->
+      <nav class="nav">
+        <ul>
+          <li><a href="#home" data-view="home" class="active">Home</a></li>
+          <li><a href="#mahasiswa" data-view="mahasiswa">Mahasiswa</a></li>
+          <li><a href="#kelas" data-view="kelas">Kelas</a></li>
+          <li><a href="#aktifitas" data-view="aktifitas">Aktifitas</a></li>
+          <li><a href="#statistik" data-view="statistik">Statistik</a></li>
+          <li><a href="#dokumen" data-view="dokumen">Dokumen</a></li>
+          <li><a href="#settings" data-view="settings" class="settings">Settings</a></li>
+          <li><a href="#signout" data-view="signout" class="signout">Sign Out</a></li>
+        </ul>
+      </nav>
+
+      <!-- ============ MAIN ============ -->
+      <main class="main">
+
+        <!-- ===== HALAMAN HOME ===== -->
+        <div class="view" id="view-home">
+
+          <div class="banner">
+            <div class="banner-text">
+              <h2>Selamat Datang, Hatika Utari Silaen<br>Kelas SI-3D</h2>
+              <p>Kamu memiliki Statistik, 3 Progres Kelas, 4 Aktifitas Selanjutnya dan 3 Lampiran Dokumen yang ada pada aplikasi ini.</p>
+            </div>
+            <!-- GAMBAR FOTO PROFIL (atribut img) -->
+            <img src="assets/poto.jpeg" alt="Foto Hatika Utari Silaen" class="foto">
+          </div>
+
+          <div class="grid">
+
+            <!-- ASIDE: Statistik Mahasiswa -->
+            <aside class="card aside">
+              <h3>Statistik Mahasiswa</h3>
+              <!-- GAMBAR STATISTIK (atribut img) -->
+              <img src="assets/Chart_Statistik.svg" alt="Grafik Statistik Mahasiswa" class="statistik">
+            </aside>
+
+            <!-- SECTION 1: Progres Kelas -->
+            <section class="card section1">
+              <h3>Progres Kelas</h3>
+              <div class="item cari-item"><b>Matakuliah A</b><span>78 Pendaftar</span></div>
+              <div class="item cari-item"><b>Matakuliah B</b><span>30 Pendaftar</span></div>
+              <div class="item cari-item"><b>Matakuliah C</b><span>40 Pendaftar</span></div>
+              <div class="item cari-item"><b>Matakuliah D</b><span>10 Pendaftar</span></div>
+            </section>
+
+            <!-- SECTION 2: Aktifitas Selanjutnya -->
+            <section class="card section2">
+              <h3>Aktifitas Selanjutnya</h3>
+              <div class="item cari-item"><b>Perkuliahan Daring 1</b><span>Senin, 15 Januari 2025</span></div>
+              <div class="item cari-item"><b>Perkuliahan Daring 1</b><span>Selasa, 15 Februari 2025</span></div>
+              <div class="item cari-item"><b>Perkuliahan Daring 1</b><span>Rabu, 15 Maret 2025</span></div>
+              <div class="item cari-item"><b>Perkuliahan Daring 1</b><span>Kamis, 15 April 2025</span></div>
+            </section>
+          </div>
+
+          <!-- FOOTER: Lampiran -->
+          <footer class="card footer">
+            <h3>Lampiran</h3>
+            <div class="doc cari-item"><p><b>Lampiran Dokumen 1 -</b> Matakuliah A | Tugas Bersama Perkuliahan Daring &nbsp;|&nbsp; <a href="#dokumen" data-view="dokumen">Lihat Dokumen</a></p></div>
+            <div class="doc cari-item"><p><b>Lampiran Dokumen 2 -</b> Matakuliah B | Tugas Bersama Perkuliahan Daring &nbsp;|&nbsp; <a href="#dokumen" data-view="dokumen">Lihat Dokumen</a></p></div>
+            <div class="doc cari-item"><p><b>Lampiran Dokumen 3 -</b> Matakuliah C | Tugas Bersama Perkuliahan Daring &nbsp;|&nbsp; <a href="#dokumen" data-view="dokumen">Lihat Dokumen</a></p></div>
+          </footer>
+        </div>
+
+        <!-- ===== HALAMAN LAIN (muncul otomatis saat menu diklik) ===== -->
+        <div class="view" id="view-mahasiswa" hidden>
+          <div class="card page">
+            <h3>Mahasiswa</h3>
+            <div class="item"><b>Nama</b><span>Hatika Utari Silaen</span></div>
+            <div class="item"><b>Kelas</b><span>SI-3D</span></div>
+            <div class="item"><b>Program Studi</b><span>Sistem Informasi</span></div>
+            <div class="item"><b>Fakultas</b><span>Ilmu Komputer, Universitas Royal</span></div>
+          </div>
+        </div>
+
+        <div class="view" id="view-kelas" hidden>
+          <div class="card page">
+            <h3>Kelas</h3>
+            <div class="item"><b>Matakuliah A</b><span>78 Pendaftar</span></div>
+            <div class="item"><b>Matakuliah B</b><span>30 Pendaftar</span></div>
+            <div class="item"><b>Matakuliah C</b><span>40 Pendaftar</span></div>
+            <div class="item"><b>Matakuliah D</b><span>10 Pendaftar</span></div>
+          </div>
+        </div>
+
+        <div class="view" id="view-aktifitas" hidden>
+          <div class="card page">
+            <h3>Aktifitas</h3>
+            <div class="item"><b>Perkuliahan Daring 1</b><span>Senin, 15 Januari 2025</span></div>
+            <div class="item"><b>Perkuliahan Daring 1</b><span>Selasa, 15 Februari 2025</span></div>
+            <div class="item"><b>Perkuliahan Daring 1</b><span>Rabu, 15 Maret 2025</span></div>
+            <div class="item"><b>Perkuliahan Daring 1</b><span>Kamis, 15 April 2025</span></div>
+          </div>
+        </div>
+
+        <div class="view" id="view-statistik" hidden>
+          <div class="card page">
+            <h3>Statistik Mahasiswa</h3>
+            <img src="assets/Chart_Statistik.svg" alt="Grafik Statistik Mahasiswa" class="statistik besar">
+          </div>
+        </div>
+
+        <div class="view" id="view-dokumen" hidden>
+          <div class="card page">
+            <h3>Dokumen</h3>
+            <div class="doc"><p><b>Lampiran Dokumen 1 -</b> Matakuliah A | Tugas Bersama Perkuliahan Daring</p></div>
+            <div class="doc"><p><b>Lampiran Dokumen 2 -</b> Matakuliah B | Tugas Bersama Perkuliahan Daring</p></div>
+            <div class="doc"><p><b>Lampiran Dokumen 3 -</b> Matakuliah C | Tugas Bersama Perkuliahan Daring</p></div>
+          </div>
+        </div>
+
+        <div class="view" id="view-settings" hidden>
+          <div class="card page">
+            <h3>Settings</h3>
+            <div class="item"><b>Nama</b><span>Hatika Utari Silaen</span></div>
+            <div class="item"><b>Kelas</b><span>SI-3D</span></div>
+            <div class="item"><b>Bahasa</b><span>Indonesia</span></div>
+          </div>
+        </div>
+
+        <div class="view" id="view-signout" hidden>
+          <div class="card page tengah">
+            <h3>Kamu sudah Sign Out</h3>
+            <p>Terima kasih sudah menggunakan Royal Dashboard.</p>
+            <button id="masuk-lagi" class="tombol">Masuk Lagi</button>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
